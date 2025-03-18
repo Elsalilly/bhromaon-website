@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Bhromaon. We are an international company that focus on travel and its experiences">
+    <meta name="og:description" content="Welcome to Bhromaon. We are an international company that focus on travel and its experiences">
+    <meta name="twitter:description" content="Welcome to Bhromaon. We are an international company that focus on travel and its experiences">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@100..900&family=Josefin+Sans:wght@100..700&family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
     <script src="https://kit.fontawesome.com/072cf4aaf6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/index.css">
@@ -11,16 +19,20 @@
 </head>
 <body>
     <header>
+        <a href="index.html"><img class="bhon-logo" src="images/bhon-logo.png" alt="company logo"></a>
+        <div class="scroll-watcher"></div>
         <div class="container_splash">
             <h1>BHROMAON</h1>
             <p class="header_sub-title">Safe Travel Anywhere</p>
             <div class="container_search">
                 <div class="box_destination">
-                    <input class="search_destination" type="text" placeholder="Search Your Travel Destination" name="search">
-                </div>
-                <div class="header_button">
-                    <button class="button-search" type="submit">SEARCH <i class="fa-solid fa-magnifying-glass"></i></button>
-                </div>
+                    <form name="destinationForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+                        <input class="search_destination" type="text" placeholder="Search Your Travel Destination" name="search">
+                        <div class="header_button">
+                            <button class="button-search" type="submit">Submit <i class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                    </form>
+                </div>         
             </div>
             <div class="scroll">
                 <p class="scroll_text">Scroll Down</p>
@@ -33,11 +45,12 @@
                     <div class="logo">
                         <li class="nav_li"><a class="nav_link" href="index.html"><p class="logo-text">BHROMAON</p></a></li>
                     </div>
-                    <div class="nav-bar">
+                    <div class="nav-bar" id="nav">
                         <li class="nav_li"><a class="nav_link" href="#">WHO WE ARE</a></li>
                         <li class="nav_li"><a class="nav_link" href="#">WHAT WE DO</a></li>
                         <li class="nav_li"><a class="nav_link" href="#">TRAVEL WITH US</a></li>
-                        <li class="nav_li"><a class="nav_link" href="#">CONTACT US</a></li>   
+                        <li class="nav_li"><a class="nav_link" href="#">CONTACT US</a></li>
+                        <li class="nav_li"><a class="nav_link icon" href="javascript:void(0);" onclick="menuFunction()"><i class="fa-solid fa-bars"></i></a></li>  
                     </div>             
                 </ul>
             </nav>
@@ -55,7 +68,7 @@
                 <p class="choose_text">Dislike men who are so beguiled and demoralized by the
                     charms of pleasure of the moment, so blinded by desire, that.
                 </p>
-                <button class="button-main" type="submit">EXPLORE PLACES</button>
+                <a href="#"><button class="button-main" type="submit">EXPLORE PLACES</button></a>
             </div>
             <div class="container_img">
                 <img class="sea-house" src="images/sea-house.png" alt="A house next to the sea">
@@ -81,24 +94,28 @@
         </section>
         <section class="spain_villa">
             <div class="container_spain villa">
-                <p class="spain_sub-title">Spain</p>
-                <h3>GRAND SPAIN MADRID</h3>
-                <p class="spain_text">But I must explain to you how all this mistaken idea of account to
-                    denouncing pleasure and praising pain was account  born and I
-                    account will give you a complete account of the system
-                </p>
-                <button class="button-main btn-spain" type="submit">BOOK NOW</button>
+                <div class="box_spain">
+                    <p class="spain_sub-title">Spain</p>
+                    <h3>GRAND SPAIN MADRID</h3>
+                    <p class="spain_text">But I must explain to you how all this mistaken idea of account to
+                        denouncing pleasure and praising pain was account  born and I
+                        account will give you a complete account of the system
+                    </p>
+                    <a href="#"><button class="button-main btn-spain" type="submit">BOOK NOW</button></a>
+                </div>
             </div>
         </section>
         <section class="spain_rock">
             <div class="container_spain rock">
-                <p class="spain_sub-title">Spain</p>
-                <h3>GRAND SPAIN MADRID</h3>
-                <p class="spain_text">But I must explain to you how all this mistaken idea of account to
-                    denouncing pleasure and praising pain was account  born and I
-                    account will give you a complete account of the system
-                </p>
-                <button class="button-main btn-spain" type="submit">BOOK NOW</button>
+                <div class="box_spain">
+                    <p class="spain_sub-title">Spain</p>
+                    <h3>GRAND SPAIN MADRID</h3>
+                    <p class="spain_text">But I must explain to you how all this mistaken idea of account to
+                        denouncing pleasure and praising pain was account  born and I
+                        account will give you a complete account of the system
+                    </p>
+                    <a href="#"><button class="button-main btn-spain" type="submit">BOOK NOW</button></a>
+                </div>
             </div>
         </section>
         <section class="reviews">
@@ -123,13 +140,33 @@
             <h5><a class="footer_title" href="#">BHROMAON</a></h5>
             <p class="footer_sub-title">Safe Travel Anywhere</p>
             <div class="social-media">
-                <i class="fa-brands fa-facebook-f"></i>
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-linkedin-in"></i>
-                <i class="fa-brands fa-youtube"></i>
-                <i class="fa-brands fa-pinterest"></i>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-pinterest"></i></a>
             </div>
         </div>
     </footer>
+    <script>
+        function menuFunction() {
+            let x = document.getElementById("nav");
+            if (x.className == "nav") {
+                x.className += "responsive";
+            } else {
+                x.className = "nav";
+            }
+        }
+    </script>
+    <script>
+        function validateForm() {
+            let x = document.forms["destinationForm"]
+            ["search"].value;
+            if (x == "") {
+                alert("Destination must be filled out");
+                return false;
+            }
+        }
+    </script>
 </body>
 </html>

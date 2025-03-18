@@ -4,6 +4,10 @@ main {
     max-height: 3153px;
 }
 
+a {
+    text-decoration: none;
+    list-style-type: none;
+}
 
 /* Section explore start */
 
@@ -80,6 +84,12 @@ h2 {
     max-height: 220px;
     margin-left: 90px;
 }
+
+/* Hover effects start */
+.button-main:hover {
+    cursor: pointer;
+}
+/* Hover effects end */
 /* Section explore end */
 
 
@@ -89,9 +99,9 @@ h2 {
     height: 340px;
     background-color: var(--container-darkgrey);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
-    flex-wrap: wrap;
+    align-items: center;
 }
 
 .works_container {
@@ -148,7 +158,6 @@ h2 {
 
 .spain_rock {
     width: 100%;
-    max-width: 1770px;
     height: 700px;
     background-image: url(../images/mountain-sunset.png);
     background-size: cover;
@@ -159,18 +168,26 @@ h2 {
 }
 
 .container_spain {
-    max-width: 543px;
+    width: 1200px;
+    height: 374px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box_spain {
+    width: 543px;
     height: 374px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    background-color: rgb(35, 35, 35, 0.9);
+    background-color: rgb(35, 35, 35, 0.9);  
 }
+
 
 .villa {
     margin-bottom: 90px;
-    margin-left: 50px;
 }
 
 .rock {

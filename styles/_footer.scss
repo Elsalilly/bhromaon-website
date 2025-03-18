@@ -52,31 +52,91 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-left: 15px;
+    position:relative;
+    margin-right: 30px;
 }
 
 .fa-facebook-f  {
     width: 45px;
+    height: 45px;
+    border-radius: 50px;
     font-size: 16px;
     color: var(--text-grey);
+    background-color: var(--container-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 500ms ease;
 }
 .fa-twitter {
     width: 45px;
+    height: 45px;
+    border-radius: 50px;
     font-size: 16px;
-    color: var(--text-grey);  
+    color: var(--text-grey);
+    background-color: var(--container-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 500ms ease;
 }
 .fa-linkedin-in {
     width: 45px;
+    height: 45px;
+    border-radius: 50px;
     font-size: 16px;
     color: var(--button-bluedark);
+    background-color: var(--container-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 500ms ease;
 }
 .fa-youtube {
     width: 45px;
+    height: 45px;
+    border-radius: 50px;
     font-size: 16px;
-    color: var(--text-grey); 
+    color: var(--text-grey);
+    background-color: var(--container-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 500ms ease;
 }
 .fa-pinterest {
     width: 45px;
+    height: 45px;
+    border-radius: 50px;
     font-size: 16px;
-    color: var(--text-grey); 
+    color: var(--text-grey);
+    background-color: var(--container-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 500ms ease;
+}
+
+.fa-facebook-f:hover {
+    color: white;
+    background-color: #1877F2;
+}
+
+.fa-twitter:hover {
+    color: white;
+    background-color: #1da1f2;
+}
+
+.fa-linkedin-in:hover {
+    color: white;
+    background-color: #0077B5;
+}
+
+.fa-youtube:hover {
+    color: white;
+    background-color: #FF0000;
+}
+.fa-pinterest:hover {
+    color: white;
+    background-color: #E60023;
 }

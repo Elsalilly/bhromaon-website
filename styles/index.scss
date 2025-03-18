@@ -1,9 +1,11 @@
+@use 'fonts';
 
 @import 'header';
 @import 'main';
 @import 'footer';
 
 body {
+    font-family: fonts.$main-font;
     margin:auto;
     width: 1173px;
     height:4271px;
